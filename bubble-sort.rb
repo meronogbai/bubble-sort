@@ -1,14 +1,15 @@
 test_array = [4,3,78,2,0,2]
-print test_array
-def bubble_sort(list)
-  #takes and array and returns a sorted array
-  n=list.length
 
-  for i in 0..(n-2) do
-    if list[i] > list[i+1]
-      # arr[i+1], arr[i] = arr[i], arr[i+1]
+def bubble_sort(arr)
+  n = arr.length
+    (n-1).times do
+      for num in 0..(n-2)
+        if arr[num] > arr[num+1]
+          arr[num], arr[num+1] = arr[num+1], arr[num]
+        end
+      end
     end
-  end
+  return arr
 end
 
-print bubble_sort(test_array)
+puts bubble_sort(test_array)
